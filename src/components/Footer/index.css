@@ -1,0 +1,11 @@
+.footer-container {
+  background-image: linear-gradient(to right, red, skyblue);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 35vh;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+}

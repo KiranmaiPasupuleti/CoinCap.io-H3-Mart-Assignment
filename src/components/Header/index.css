@@ -1,0 +1,39 @@
+.header-container {
+  height: 8vh;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.coin-exchange-swap-container {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 40px;
+}
+
+.logo-img {
+  width: 80px;
+  margin-top: 15px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 20px;
+}
+.select1 {
+  margin-top: 25px;
+  margin-right: 12px;
+}
+.select-container {
+  width: 40%;
+  height: 28%;
+  display: flex;
+  margin-bottom: 28px;
+  align-items: center;
+}
+.header-icons {
+  margin-top: 20px;
+  margin-right: 10px;
+}
