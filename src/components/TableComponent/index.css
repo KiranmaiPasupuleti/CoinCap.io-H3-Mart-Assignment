@@ -65,3 +65,7 @@
   align-items: center;
   height: 100vh;
 }
+.down-arrow {
+  border: 0;
+  width: 10px;
+}

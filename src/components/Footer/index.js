@@ -9,45 +9,90 @@ const Footer = () => {
 
   return (
     <div className="footer-container">
-      <ul className="coincapio-container">
+      <div className="coincapio-container">
         <p className="follow-para-text">COINCAP.IO </p>
-        <a href="https://coincap.io/methodology">link here</a>
-        <li className="coincap-li">Methodology</li>
-        <li className="coincap-li">Support</li>
-        <li className="coincap-li">Our API</li>
-        <li className="coincap-li">Rate Comparison</li>
-        <li className="coincap-li">Careers</li>
-      </ul>
+
+        <a className="anchor-styling" href="https://coincap.io/methodology">
+          Methodology
+        </a>
+
+        <a
+          href="https://shapeshift.zendesk.com/hc/en-us/requests/new"
+          className="anchor-styling"
+        >
+          Support
+        </a>
+        <a href="https://docs.coincap.io/" className="anchor-styling">
+          Our API
+        </a>
+        <a href="https://coincap.io/rate-compare" className="anchor-styling">
+          Rate Comparison
+        </a>
+        <a href="https://shapeshift.com/contribute" className="anchor-styling">
+          Careers
+        </a>
+      </div>
 
       <div>
-        <ul className="legal-container">
+        <div className="legal-container">
           <p className="follow-para-text">LEGALS</p>
-          <li className="legal-li">Terms of Service</li>
-          <li className="legal-li">Privacy Policy</li>
-        </ul>
+          <a
+            href="https://assets.coincap.io/documents/terms_of_service.pdf"
+            className="legal-li anchor-styling"
+          >
+            Terms of Service
+          </a>
+          <a
+            href="https://shapeshift.com/privacy?_ga=2.32122238.1309090788.1673455252-1821674170.1673455252"
+            className="legal-li anchor-styling"
+          >
+            Privacy Policy
+          </a>
+        </div>
 
-        <ul className="disclaimer-container">
+        <div className="disclaimer-container">
           <p className="follow-para-text">DISCLAIMER</p>
-          <li className="disclaimer-li">
+          <p className="disclaimer-li">
             Neither shapeShift AG nor CoinCapp are in any way associated with
             CoinMarketCap, LLC or any of its goods and services.
-          </li>
-        </ul>
+          </p>
+        </div>
       </div>
 
       <div className="follow-container">
         <p className="follow-para-text">FOLLOW US</p>
-        <AiOutlineTwitter className="follow-us-icons" />
-        <AiFillFacebook className="follow-us-icons" />
+        <a href="https://twitter.com/CoinCap_io" className="anchor-styling">
+          <AiOutlineTwitter className="follow-us-icons" />
+        </a>
+        <a
+          href="https://www.facebook.com/coincapmarketdata/videos/365220420785166/"
+          className="anchor-styling"
+        >
+          <AiFillFacebook className="follow-us-icons" />
+        </a>
       </div>
       <div className="app-available-container">
         <p className="follow-para-text">COINCAP AVAILABLE ON</p>
-        <img
-          className="available-imgs"
-          src={googlePlayImg}
-          alt="google-play-img"
-        />
-        <img className="available-imgs" src={appStoreImg} alt="app-store-img" />
+        <a
+          target="_blank"
+          href="https://play.google.com/store/apps/details?id=io.coinCap.coinCap"
+        >
+          <img
+            className="available-imgs"
+            src={googlePlayImg}
+            alt="google-play-img"
+          />
+        </a>
+        <a
+          target="_blank"
+          href="https://apps.apple.com/us/app/coincap/id1074052280?ign-mpt=uo%3D4"
+        >
+          <img
+            className="available-imgs"
+            src={appStoreImg}
+            alt="app-store-img"
+          />
+        </a>
       </div>
     </div>
   )

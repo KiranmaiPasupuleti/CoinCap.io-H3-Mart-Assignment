@@ -18,15 +18,16 @@ class TableComponent extends Component {
   }
 
   getData = async () => {
-    const {limit} = this.state
+    let {limit} = this.state
     const apiUrl = `https://api.coincap.io/v2/assets?limit=${limit}`
     const options = {method: 'GET'}
 
     const response = await fetch(apiUrl, options)
     if (response.ok) {
       const fetchedData = await response.json()
-      const formattedData = fetchedData.data
+      var formattedData = fetchedData.data
       //   console.log(formattedData)
+
       this.setState(prevState => ({isLoading: !prevState.isLoading}))
       this.setState({itemsList: formattedData})
     }
@@ -46,7 +47,14 @@ class TableComponent extends Component {
             {!isLoading && (
               <thead className="thead-styles">
                 <th className="rank">
-                  Rank <BiDownArrow className="arrow-rank" />
+                  Rank{' '}
+                  <button
+                    className="down-arrow"
+                    onClick={this.onClickRankArrow}
+                    type="button"
+                  >
+                    <BiDownArrow className="arrow-rank" />
+                  </button>
                 </th>
                 <th className="name">Name</th>
                 <th className="price">Price</th>
