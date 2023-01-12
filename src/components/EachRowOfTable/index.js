@@ -1,3 +1,4 @@
+import formattedCurrency from '../FormattedCurrency'
 import './index.css'
 
 const EachRowOfTable = props => {
@@ -24,6 +25,10 @@ const EachRowOfTable = props => {
   const percentageClassName =
     percentageVal > 0 ? 'change green-percentage' : 'change red-percentage'
 
+  const updatedSupply = formattedCurrency(supply)
+  const updatedVolume = formattedCurrency(volumeUsd24Hr)
+  const updatedMarketCapUsd = formattedCurrency(marketCapUsd)
+
   return (
     <tr className="row-styling">
       <td className="rank">{rank}</td>
@@ -34,15 +39,14 @@ const EachRowOfTable = props => {
             <p>
               {name} <br /> {symbol}
             </p>
-            {/* <p>{symbol}</p> */}
           </div>
         </div>
       </td>
       <td className="price">${roundedPriceUsd}</td>
-      <td className="market-cap">{marketCapUsd}</td>
+      <td className="market-cap">${updatedMarketCapUsd}</td>
       <td className="vwap">${vwap}</td>
-      <td className="supply">{supply}</td>
-      <td className="volume">{volumeUsd24Hr}</td>
+      <td className="supply">{updatedSupply}</td>
+      <td className="volume">${updatedVolume}</td>
       <td className={percentageClassName}>{percentageVal}%</td>
     </tr>
   )

@@ -1,11 +1,41 @@
 .footer-container {
-  background-image: linear-gradient(to right, red, skyblue);
+  background-image: linear-gradient(to right, blue, skyblue);
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 35vh;
+  justify-content: space-around;
   padding: 10px;
-  position: absolute;
-  bottom: 0;
+  color: white;
+  padding: 20px;
+}
+
+.coincap-li {
+  list-style-type: none;
+}
+
+.legal-li {
+  list-style-type: none;
+}
+.disclaimer-li {
+  list-style-type: none;
+  width: 350px;
+}
+
+.app-available-container {
+  display: flex;
+  flex-direction: column;
+}
+li {
+  color: whitesmoke;
+}
+.follow-para-text {
+  font-weight: bold;
+  font-size: 18px;
+}
+.available-imgs {
+  margin-top: 5px;
+  width: 180px;
+}
+.follow-us-icons {
+  font-size: 32px;
+  margin-right: 10px;
 }

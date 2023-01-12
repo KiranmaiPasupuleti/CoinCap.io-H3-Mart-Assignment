@@ -1,15 +1,15 @@
 import numeral from 'numeral'
 
-function formattedCurrency(props) {
+function formattedCurrency(value) {
   let formattedVal
-  if (props.value >= 1000000000) {
-    formattedVal = numeral(props.value / 1000000000).format('$0.00a') + 'b'
-  } else if (props.value >= 1000000) {
-    formattedVal = numeral(props.value / 1000000).format('$0.00a') + 'm'
+  if (value >= 1000000000) {
+    formattedVal = numeral(value / 1000000000).format('0.00a') + 'b'
+  } else if (value >= 1000000) {
+    formattedVal = numeral(value / 1000000).format('0.00a') + 'm'
   } else {
-    formattedVal = numeral(props.value).format('$0,0.00')
+    formattedVal = numeral(value).format('0,0.00')
   }
-  return <>{formattedVal}</>
+  return <>{formattedVal} </>
 }
 
 export default formattedCurrency

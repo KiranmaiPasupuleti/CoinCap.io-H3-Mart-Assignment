@@ -4,6 +4,7 @@ import {Component} from 'react'
 
 import './index.css'
 import EachRowOfTable from '../EachRowOfTable'
+import Footer from '../Footer'
 
 class TableComponent extends Component {
   state = {
@@ -76,6 +77,7 @@ class TableComponent extends Component {
             View More
           </button>
         )}
+        <Footer />
       </div>
     )
   }

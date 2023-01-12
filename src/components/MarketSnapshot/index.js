@@ -1,4 +1,5 @@
 import TableComponent from '../TableComponent'
+
 import './index.css'
 
 const MarketSnapshot = () => (
